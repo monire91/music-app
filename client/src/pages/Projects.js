@@ -12,12 +12,14 @@ const Projects = () => {
     const clickSubmit = async event => {
         event.preventDefault()
         let token = localStorage.getItem('myData');
+        let type = localStorage.getItem('type');
         console.log(token)
         await fetch( "http://localhost:5000/api/posts", {
             method: 'GET',
             headers: new Headers({
                 // 'Content-Type': 'text/plain',
-                'auth-token':token
+                'auth-token':token,
+                'type':type
             }),
             credentials: "same-origin"
         })

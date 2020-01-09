@@ -58,8 +58,8 @@ router.post('/login', async (req, res) => {
     }
 
     const token = jwt.sign({_id: user._id}, 'secret_sdfsgsgssefasfsgsg');
-    // res.header('auth-token', token).send(token);
-    res.status(200).json({token})
+    const type = user.type;
+    res.status(200).json({token,type})
 });
 
 

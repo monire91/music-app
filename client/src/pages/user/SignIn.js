@@ -44,6 +44,7 @@ const Signin = () => {
                     console.log(response);
                     setFormData({...formData, success: true})
                     localStorage.setItem('myData', response.data.token);
+                    localStorage.setItem('type', response.data.type);
             },
                 (error) => {
                     console.log(error);

@@ -1,8 +1,6 @@
 import React from 'react';
 import Layout from "../components/Layout";
-import ReduxPlay from "../components/reduxPlay";
 
-import SignIn from "../components/SignIn";
 import DisplaySongs from "../components/songs/DisplaySongs";
 import UploadSong from "../components/songs/UploadSong";
 

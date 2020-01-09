@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router();
 const Post = require('../../models/Post');
 const verify = require('../../verifyToken');
+const verifyAdmin = require('../../verifyAdmin');
 
-router.get('/posts', verify,async (req,res)=>{
+router.get('/posts', verify,verifyAdmin,async (req,res)=>{
 
     console.log('postssssss')
     try {
